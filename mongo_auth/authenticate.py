@@ -142,7 +142,7 @@ class Authenticate:
                 print('user verified!!!')
                 return True
             else:
-                st.session_state['verified'] = Trueß
+                st.session_state['verified'] = True
                 print('user not verified')
                 return False
         st.session_state['verified'] = False
