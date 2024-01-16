@@ -87,14 +87,14 @@ if st.session_state['verified'] and st.session_state["authentication_status"]:
     
     st.write(st.session_state['translation'])
 
-# Handle actions for users with correct password but unverified email
-elif st.session_state["authentication_status"] == True:
-    st.error('Your password was correct, but your email has not been not verified. Check your email for a verification link. After you verify your email, refresh this page to login.')
+# # Handle actions for users with correct password but unverified email
+# elif st.session_state["authentication_status"] == True:
+#     st.error('Your password was correct, but your email has not been not verified. Check your email for a verification link. After you verify your email, refresh this page to login.')
     
-    # Add a button to resend the email verification
-    if st.session_state.get('email'):
-        if st.button(f"Resend Email Verification to {st.session_state['email']}"):
-            resend_verification(st.session_state['email'])
+#     # Add a button to resend the email verification
+#     if st.session_state.get('email'):
+#         if st.button(f"Resend Email Verification to {st.session_state['email']}"):
+#             resend_verification(st.session_state['email'])
 
 # Handle actions for users with incorrect login credentials
 elif st.session_state["authentication_status"] == False:
