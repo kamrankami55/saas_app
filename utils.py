@@ -9,15 +9,15 @@ import requests
 load_dotenv()
 import numpy as np
 
-def resend_verification(email):
-    # Call FastAPI email verification service
-    verification_url = os.getenv("VERIFICATION_URL")
-    data = {'email': email}
-    response = requests.post(verification_url, json=data)
-    if response.status_code != 200:
-        st.error(f"Failed to resend verification email: {response.text}")
-    else:
-        st.success("Verification email resent successfully!")
+# def resend_verification(email):
+#     # Call FastAPI email verification service
+#     verification_url = os.getenv("VERIFICATION_URL")
+#     data = {'email': email}
+#     response = requests.post(verification_url, json=data)
+#     if response.status_code != 200:
+#         st.error(f"Failed to resend verification email: {response.text}")
+#     else:
+#         st.success("Verification email resent successfully!")
 
 
 def is_email_subscribed(email):
